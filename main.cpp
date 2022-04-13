@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <windows.h>
+#include <conio.h>
 #define CURSORI_H_INCLUDED
 #define CONSOLE_FULLSCREEN_MODE 1
 #pragma comment(lib, "user32")
@@ -14,9 +15,14 @@ void schermo_intero();
 void titolo_menu(short int x, short int y);
 
 int main(){
+    int risposta = 0;
     schermo_intero();
 
     titolo_menu(70, 0);
+
+    risposta = getch();
+
+    cout << risposta << endl;
 
     system("pause");
 
