@@ -18,11 +18,7 @@ int main(){
     int risposta = 0;
     schermo_intero();
 
-    titolo_menu(70, 0);
-
-    risposta = getch();
-
-    cout << risposta << endl;
+    titolo_menu(70, 0);    
 
     system("pause");
 
