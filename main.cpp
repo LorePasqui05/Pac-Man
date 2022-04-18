@@ -15,11 +15,11 @@ void schermo_intero();
 void titolo_menu(short int x, short int y);
 
 int main(){
-    int risposta = 0;
+
     schermo_intero();
 
-    titolo_menu(70, 0);    
-
+    titolo_menu(70, 0); 
+    
     system("pause");
 
     return 0;
@@ -62,7 +62,5 @@ void titolo_menu(short int x, short int y){
     gotoXY(x, y++);
     cout << "                 \\/       \\/                    \\/       \\/       \\/ " << endl;
     setColor(0, 7);
-    gotoXY(100, 9);
-    cout << "Gioca!!" << endl;
 }
 
