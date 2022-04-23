@@ -13,12 +13,20 @@ void gotoXY(short int x, short int y);
 void setColor(short int bg, short int fg);
 void schermo_intero();
 void titolo_menu(short int x, short int y);
+void selezione(short int x, short int y);
 
 int main(){
+    int invio = 0;
 
     schermo_intero();
 
-    titolo_menu(70, 0); 
+    titolo_menu(70, 0);
+    /*
+    invio = getch();
+
+    cout << invio << endl;
+    */
+    selezione(70, 10);
     
     system("pause");
 
@@ -49,7 +57,7 @@ void schermo_intero(){
 
 void titolo_menu(short int x, short int y){
     setColor(0, 6);
-    gotoXY(x, y);
+    gotoXY(x, y++);
     cout << "__________                                 _____                     " << endl;
     gotoXY(x, y++);
     cout << "\\______   \\ _____      ____               /     \\   _____      ____  " << endl;
@@ -64,3 +72,58 @@ void titolo_menu(short int x, short int y){
     setColor(0, 7);
 }
 
+void selezione(short int x, short int y){
+    const int MAX_VECT = 2;
+    int selezione = 0, tasto = 0, invio = 0;
+
+    setColor(0, 6);
+    gotoXY(x, y);
+    cout << "Gioca!!" << endl;
+    setColor(0, 7);
+
+    gotoXY(x, y+2);
+    cout << "Esci" << endl;
+
+    tasto = getch();
+
+    if (tasto == 13){
+        
+    }
+    
+    do
+    {
+        if (tasto == 115){  
+
+            selezione = 2;
+            gotoXY(x, y);
+            cout << "Gioca!!" << endl;
+
+            gotoXY(x, y+2);
+            setColor(0, 6);
+            cout << "Esci" << endl;
+            setColor(0, 7);
+
+            tasto = getch();
+
+            if (tasto == 13){
+                selezione = 2;
+            }
+        }
+        else if (tasto == 119){
+            gotoXY(x, y);
+            setColor(0, 6);
+            cout << "Gioca!!" << endl;
+            setColor(0, 7);
+
+            gotoXY(x, y+2);
+            cout << "Esci" << endl;
+
+            tasto = getch();
+
+            if (tasto == 13){
+                selezione = 1;
+            }
+
+        }
+    } while (selezione != 2);
+}
