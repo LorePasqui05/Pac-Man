@@ -85,16 +85,10 @@ void selezione(short int x, short int y){
     cout << "Esci" << endl;
 
     tasto = getch();
-
-    if (tasto == 13){
-        
-    }
     
     do
     {
         if (tasto == 115){  
-
-            selezione = 2;
             gotoXY(x, y);
             cout << "Gioca!!" << endl;
 
