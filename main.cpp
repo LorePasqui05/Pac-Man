@@ -14,6 +14,8 @@ void setColor(short int bg, short int fg);
 void schermo_intero();
 void titolo_menu(short int x, short int y);
 void selezione(short int x, short int y);
+void scritta_gioca(short int x, short int y);
+void scritta_esci(short int x, short int y);
 
 int main(){
     int invio = 0;
@@ -23,8 +25,6 @@ int main(){
     titolo_menu(70, 0);
     
     selezione(70, 10);
-    
-    system("pause");
 
     return 0;
 }
@@ -74,11 +74,11 @@ void selezione(short int x, short int y){
 
     setColor(0, 6);
     gotoXY(x, y);
-    cout << "Gioca!!" << endl;
+    scritta_gioca(x, y);
     setColor(0, 7);
 
-    gotoXY(x, y+2);
-    cout << "Esci" << endl;
+    gotoXY(x, y+6);
+    scritta_esci(x, y+6);
 
     tasto = getch();
     
@@ -86,11 +86,11 @@ void selezione(short int x, short int y){
     {
         if (tasto == 115){  
             gotoXY(x, y);
-            cout << "Gioca!!" << endl;
+            scritta_gioca(x, y);
 
-            gotoXY(x, y+2);
+            gotoXY(x, y+6);
             setColor(0, 6);
-            cout << "Esci" << endl;
+            scritta_esci(x, y+6);
             setColor(0, 7);
 
             tasto = getch();
@@ -102,11 +102,11 @@ void selezione(short int x, short int y){
         else if (tasto == 119){
             gotoXY(x, y);
             setColor(0, 6);
-            cout << "Gioca!!" << endl;
+            scritta_gioca(x, y);
             setColor(0, 7);
 
-            gotoXY(x, y+2);
-            cout << "Esci" << endl;
+            gotoXY(x, y+6);
+            scritta_esci(x, y+6);
 
             tasto = getch();
 
@@ -116,4 +116,34 @@ void selezione(short int x, short int y){
 
         }
     } while (selezione != 2);
+}
+
+void scritta_gioca(short int x, short int y){
+    gotoXY(x, y++);
+    cout << "  ________  .__                             " << endl;
+    gotoXY(x, y++);
+    cout << " /  _____/  |__|   ____     ____   _____    " << endl;
+    gotoXY(x, y++);
+    cout << "/   \\  ___  |  |  /  _ \\  _/ ___\\  \\__  \\   " << endl;
+    gotoXY(x, y++);
+    cout << "\\    \\_\\  \\ |  | (  <_> ) \\  \\___   / __ \\_ " << endl;
+    gotoXY(x, y++);
+    cout << " \\______  / |__|  \\____/   \\___  > (____  / " << endl;
+    gotoXY(x, y++);
+    cout << "        \\/                     \\/       \\/  " << endl;
+}
+
+void scritta_esci(short int x, short int y){
+    gotoXY(x, y++);
+    cout << "                           .__              " << endl;
+    gotoXY(x, y++);
+    cout << "  ____     ______   ____   |__|             " << endl;
+    gotoXY(x, y++);
+    cout << "_/ __ \\   /  ___/ _/ ___\\  |  |             " << endl;
+    gotoXY(x, y++);
+    cout << "\\  ___/   \\___ \\  \\  \\___  |  |             " << endl;
+    gotoXY(x, y++);
+    cout << " \\___  > /____  >  \\___  > |__|             " << endl;
+    gotoXY(x, y++);
+    cout << "     \\/       \\/       \\/                   " << endl;
 }
