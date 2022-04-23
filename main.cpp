@@ -18,8 +18,6 @@ void scritta_gioca(short int x, short int y);
 void scritta_esci(short int x, short int y);
 
 int main(){
-    int invio = 0;
-
     schermo_intero();
 
     titolo_menu(70, 0);
