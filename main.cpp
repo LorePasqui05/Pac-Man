@@ -21,11 +21,7 @@ int main(){
     schermo_intero();
 
     titolo_menu(70, 0);
-    /*
-    invio = getch();
-
-    cout << invio << endl;
-    */
+    
     selezione(70, 10);
     
     system("pause");
