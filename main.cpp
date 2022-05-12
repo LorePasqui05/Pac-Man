@@ -20,9 +20,9 @@ void scritta_esci(short int x, short int y);
 int main(){
     schermo_intero();
 
-    titolo_menu(70, 0);
+    titolo_menu(0, 0);
     
-    selezione(70, 10);
+    selezione(0, 10);
 
     return 0;
 }
