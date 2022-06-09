@@ -67,7 +67,7 @@ void titolo_menu(short int x, short int y){
 }
 
 void selezione(short int x, short int y){
-    int selezione = 0, tasto = 0, invio = 0;
+    int selezione = 0, tasto = 0;
 
     setColor(0, 6);
     gotoXY(x, y);
