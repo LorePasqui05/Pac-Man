@@ -67,7 +67,6 @@ void titolo_menu(short int x, short int y){
 }
 
 void selezione(short int x, short int y){
-    const int MAX_VECT = 2;
     int selezione = 0, tasto = 0, invio = 0;
 
     setColor(0, 6);
